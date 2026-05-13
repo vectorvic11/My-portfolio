@@ -1,0 +1,130 @@
+/* Color Palette */
+:root {
+  --dark-bg: #000000;
+  --accent-gold: #d4a373; /* Gold color from screenshot */
+  --text-main: #ffffff;
+  --text-muted: #a0a0a0;
+  --border-subtle: #333333;
+}
+
+.about {
+  background: var(--dark-bg);
+  padding: 8rem 2rem;
+  color: var(--text-main);
+}
+
+.about-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1.2fr; /* Content slightly wider than image */
+  gap: 6rem;
+  align-items: center;
+}
+
+/* IMAGE SECTION */
+.about-image {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.image-box {
+  width: 100%;
+  max-width: 450px;
+  /* Portrait aspect ratio */
+  aspect-ratio: 4 / 5; 
+  border-radius: 1.5rem;
+  overflow: hidden;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.5);
+}
+
+.image-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s ease;
+}
+
+.image-box:hover img {
+  transform: scale(1.05);
+}
+
+/* CONTENT SECTION */
+.about-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.about-label {
+  color: var(--accent-gold);
+  text-transform: uppercase;
+  letter-spacing: 0.3rem;
+  font-size: 0.8rem;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+}
+
+.about-title {
+  font-size: 3.5rem;
+  line-height: 1.1;
+  font-weight: 700;
+  margin-bottom: 2.5rem;
+  color: var(--text-main);
+}
+
+.about-text {
+  color: var(--text-muted);
+  font-size: 1.1rem;
+  line-height: 1.7;
+  max-width: 540px;
+  margin-bottom: 1.5rem;
+}
+
+/* STATS SECTION */
+.stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  margin-top: 3rem;
+  padding-top: 3rem;
+  border-top: 1px solid var(--border-subtle);
+}
+
+.stat {
+  text-align: left; /* Aligned left like screenshot */
+}
+
+.stat h3 {
+  font-size: 2.2rem;
+  color: var(--accent-gold);
+  margin-bottom: 0.2rem;
+}
+
+.stat p {
+  color: var(--text-muted);
+  font-size: 0.85rem;
+  text-transform: capitalize;
+}
+
+/* RESPONSIVE */
+@media (max-width: 1024px) {
+  .about-container {
+    grid-template-columns: 1fr;
+    gap: 4rem;
+  }
+  
+  .about-title {
+    font-size: 2.8rem;
+  }
+
+  .about-image {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 640px) {
+  .stats {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+}

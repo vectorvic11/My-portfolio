@@ -1,0 +1,60 @@
+.footer {
+  background: #000000 !important; /* Pure black */
+  color: #ffffff;
+  padding: 2.5rem 2rem; /* Slightly tighter padding */
+  border-top: 1px solid #1a1a1a; /* Subtle divider to match other sections */
+}
+
+.footer-container {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.copyright {
+  margin: 0;
+  color: #666; /* Muted grey like the screenshot */
+  font-size: 0.85rem;
+  letter-spacing: 0.02rem;
+}
+
+.social-links {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.social-links a {
+  color: #888; /* Slightly brighter than copyright but still muted */
+  text-decoration: none;
+  font-size: 0.85rem;
+  transition: all 0.3s ease;
+}
+
+.social-links a:hover {
+  color: #ffffff; /* Glows white on hover */
+  transform: translateY(-2px);
+}
+
+/* RESPONSIVE */
+@media (max-width: 640px) {
+  .footer {
+    padding: 2rem 1.5rem;
+  }
+
+  .footer-content {
+    flex-direction: column-reverse; /* Put links on top for mobile */
+    text-align: center;
+    gap: 1.5rem;
+  }
+
+  .social-links {
+    justify-content: center;
+  }
+}

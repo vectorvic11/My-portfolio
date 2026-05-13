@@ -1,0 +1,220 @@
+.projects {
+  background-color: #000000;
+  padding: 100px 20px;
+  color: #ffffff;
+}
+
+.projects-container {
+  max-width: 1300px;
+  margin: 0 auto;
+}
+
+/* HEADER STYLING */
+.projects-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end; /* Aligns text to bottom */
+  margin-bottom: 60px;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.selected-work-label {
+  color: #e2b064; /* Bronze/Gold color */
+  font-size: 0.8rem;
+  letter-spacing: 2px;
+  font-weight: 700;
+  display: block;
+  margin-bottom: 10px;
+}
+
+.header-title {
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  font-weight: 800;
+  margin: 0;
+  color: #ffffff;
+}
+
+.header-right p {
+  color: #a1a1a1;
+  max-width: 350px;
+  font-size: 1rem;
+  line-height: 1.5;
+  text-align: right;
+}
+
+/* GRID STYLING */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 40px;
+}
+
+.project-card {
+  background-color: #0a0a0a; /* Very dark grey card */
+  border: 1px solid #1a1a1a;
+  border-radius: 24px;
+  padding: 16px;
+  transition: transform 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+}
+
+.project-image-wrapper {
+  width: 100%;
+  border-radius: 18px;
+  overflow: hidden;
+  margin-bottom: 24px;
+}
+
+.project-image-wrapper img {
+  width: 100%;
+  display: block;
+  transition: transform 0.5s ease;
+}
+
+/* INFO ROW (Title + Tech) */
+.project-info {
+    padding: 0 8px 10px 8px;
+}
+
+.project-title-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.project-title-row h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin: 0;
+  color: #ffffff;
+}
+
+.project-title-row h3 span {
+  color: #a1a1a1;
+  font-weight: 400;
+}
+
+.tech-stack {
+  font-size: 0.75rem;
+  color: #444444;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.project-description {
+  color: #a1a1a1;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin-bottom: 24px;
+}
+
+/* BUTTONS */
+.project-actions {
+  display: flex;
+  gap: 12px;
+}
+
+.btn-pill {
+  padding: 8px 24px;
+  border-radius: 100px;
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-weight: 600;
+  transition: 0.3s ease;
+}
+
+.btn-white {
+  background-color: #ffffff;
+  color: #000000;
+}
+
+.btn-white:hover {
+  background-color: #e0e0e0;
+}
+
+.btn-outline {
+  border: 1px solid #333333;
+  color: #ffffff;
+}
+
+.btn-outline:hover {
+  border-color: #ffffff;
+}
+
+/* RESPONSIVE */
+@media (max-width: 1024px) {
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .header-right p {
+    text-align: left;
+  }
+}
+
+@media (max-width: 600px) {
+    .project-title-row {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 5px;
+    }
+}
+/* 1. THE ZOOM EFFECT (When arrow/mouse comes to it) */
+.project-image-wrapper {
+  width: 100%;
+  border-radius: 18px;
+  overflow: hidden; /* CRUCIAL: This hides the part of the image that scales outside the box */
+  margin-bottom: 24px;
+  background-color: #111; /* Dark background before image loads */
+}
+
+.project-image-wrapper img {
+  width: 100%;
+  display: block;
+  /* Premium smooth transition: 0.6s with a 'cubic-bezier' makes it feel high-end */
+  transition: transform 0.6s cubic-bezier(0.25, 1, 0.5, 1); 
+}
+
+/* When the card is hovered, scale the image inside */
+.project-card:hover .project-image-wrapper img {
+  transform: scale(1.1); /* Zooms in by 10% */
+}
+
+
+/* 2. THE REVEAL EFFECT (When screen is reached / Page loads) */
+.project-card {
+  background-color: #0a0a0a;
+  border: 1px solid #1a1a1a;
+  border-radius: 24px;
+  padding: 16px;
+  transition: all 0.3s ease;
+  
+  /* Initial state for animation */
+  opacity: 0;
+  transform: translateY(30px);
+  animation: revealIn 0.8s ease forwards;
+}
+
+/* Add a delay so cards pop up one after another */
+.project-card:nth-child(1) { animation-delay: 0.1s; }
+.project-card:nth-child(2) { animation-delay: 0.2s; }
+.project-card:nth-child(3) { animation-delay: 0.3s; }
+.project-card:nth-child(4) { animation-delay: 0.4s; }
+
+@keyframes revealIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Hover effect for the card itself */
+.project-card:hover {
+  border-color: #333;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}

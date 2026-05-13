@@ -1,0 +1,173 @@
+/* CONTACT SECTION BASE */
+.contact {
+  background-color: #000000 !important; /* Forces black background */
+  color: #ffffff;
+  padding: 8rem 2rem;
+  font-family: 'Inter', sans-serif;
+}
+
+.contact-container {
+  max-width: 900px; /* Reduced width to make everything feel compact */
+  margin: 0 auto;
+  text-align: center;
+}
+
+/* HEADER STYLES */
+.section-header {
+  margin-bottom: 4rem;
+}
+
+.contact-tag {
+  color: #c9a96e; /* Gold color */
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.3rem;
+  display: block;
+  text-transform: uppercase;
+  margin-bottom: 1.5rem;
+}
+
+.contact-main-title {
+  font-size: 3.5rem;
+  font-weight: 700;
+  line-height: 1.1;
+  margin-bottom: 1.5rem;
+  letter-spacing: -1px;
+}
+
+.contact-main-title span {
+  color: #c9a96e; /* Gold color for 'together.' */
+}
+
+.contact-subtext {
+  color: #999;
+  font-size: 1.1rem;
+  max-width: 550px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+/* CARDS GRID */
+.contact-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  margin: 4rem 0;
+}
+
+/* INDIVIDUAL CARD */
+.card {
+  background-color: #0a0a0a !important; /* Dark grey, NOT white */
+  border: 1px solid #1a1a1a !important; /* Very subtle border */
+  padding: 1.5rem !important; /* Compact padding */
+  border-radius: 12px;
+  text-align: left;
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 110px;
+}
+
+.card:hover {
+  border-color: #333 !important;
+  background-color: #111 !important;
+  transform: translateY(-3px);
+}
+
+.card-label {
+  color: #666 !important; /* Muted label text */
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.1rem;
+  margin-bottom: 0.8rem;
+  text-transform: uppercase;
+  margin-top: 0;
+}
+
+.card-value {
+  color: #ffffff !important; /* Bright white info text */
+  font-size: 0.95rem;
+  font-weight: 500;
+  margin: 0;
+  word-break: break-all; /* Prevents long emails from breaking layout */
+}
+
+/* PILL BUTTON (Standard Mailto Link) */
+.contact-action {
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+.send-message-btn {
+  display: inline-block;
+  padding: 1rem 2.8rem;
+  border-radius: 50px; /* Perfect pill shape */
+  border: 1.5px solid #ffffff;
+  background: transparent;
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 0.95rem;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.send-message-btn:hover {
+  background-color: #ffffff;
+  color: #000000;
+  transform: scale(1.05);
+}
+
+/* RESPONSIVE DESIGN */
+@media (max-width: 850px) {
+  .contact-cards {
+    grid-template-columns: 1fr; /* Stack cards on tablet/mobile */
+    max-width: 400px;
+    margin: 3rem auto;
+  }
+
+  .contact-main-title {
+    font-size: 2.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .contact {
+    padding: 5rem 1.5rem;
+  }
+  
+  .contact-main-title {
+    font-size: 2.2rem;
+  }
+}
+/* Update this in your Contact.css */
+.card {
+  text-decoration: none; /* Removes underline from links */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: #0a0a0a !important;
+  border: 1px solid #1a1a1a !important;
+  padding: 1.5rem !important;
+  border-radius: 12px;
+  text-align: left;
+  transition: all 0.3s ease;
+  min-height: 110px;
+  cursor: pointer; /* Shows the pointer hand icon */
+}
+
+/* Ensure text stays white inside the clickable card */
+.card-value {
+  color: #ffffff !important;
+  font-size: 0.95rem;
+  font-weight: 500;
+  margin: 0;
+}
+
+/* Hover effect for the clickable card */
+.card:hover {
+  border-color: #c9a96e !important; /* Gold border on hover */
+  background-color: #111 !important;
+  transform: translateY(-5px);
+}

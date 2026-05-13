@@ -1,0 +1,89 @@
+.navbar {
+  position: fixed !important; /* Forces it to stay on screen */
+  top: 0;
+  left: 0;
+  width: 100% !important;
+  z-index: 9999 !important; /* Stays above zooming images */
+  background-color: rgba(0, 0, 0, 0.9) !important; /* Semi-transparent black */
+  backdrop-filter: blur(10px); /* Premium blurry effect */
+  padding: 1.2rem 0 !important;
+  border-bottom: 1px solid #111111;
+  display: block; /* Overrides bootstrap defaults if necessary */
+}
+
+.navbar-container {
+  width: 100%;
+  max-width: 100%;
+  padding: 0 4rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+/* BRAND (Far Left) */
+.navbar-brand a {
+  font-size: 1.6rem;
+  font-weight: 800;
+  color: #ffffff !important;
+  text-decoration: none;
+  letter-spacing: -1px;
+}
+
+.brand-dot {
+  color: #e2b064; 
+}
+
+/* CENTER LINKS (Centered) */
+.navbar-links {
+  display: flex;
+  gap: 3rem;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.nav-item {
+  color: #ffffff !important;
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-weight: 500;
+  opacity: 0.6;
+  transition: opacity 0.3s ease;
+}
+
+.nav-item:hover {
+  opacity: 1;
+}
+
+/* HIRE ME BUTTON (Far Right) */
+.hire-btn {
+  background-color: #ffffff !important;
+  color: #000000 !important;
+  padding: 0.7rem 1.8rem !important;
+  border-radius: 100px !important;
+  font-weight: 600;
+  font-size: 0.95rem;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.hire-btn:hover {
+  background-color: #e5e5e5 !important;
+  transform: scale(1.05);
+}
+
+@media (max-width: 1024px) {
+  .navbar-container {
+    padding: 0 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .navbar-links {
+    display: none;
+  }
+  .navbar-container {
+    padding: 0 1.5rem;
+  }
+}
