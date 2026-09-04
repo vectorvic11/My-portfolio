@@ -1,5 +1,5 @@
 import './About.css';
-import img1 from '../assets/image1.jpg'; // Ensure this is a portrait high-res image
+import img1 from '../assets/image1.jpeg'; // Ensure this is a portrait high-res image
 
 export default function About() {
   return (
@@ -23,29 +23,29 @@ export default function About() {
           </h1>
 
           <p className="about-text">
-            I'm a developer and designer with a focus on premium, conversion-focused websites.
-            I care about typography, motion, and the small details that make digital products feel considered.
+            I help UK and European businesses solve the 'invisible website' problem. 
+            If your business has great reviews but isn't showing up on the first page of Google, I build the direct path to get you there. I specialize in ultra-fast, mobile-ready sites that rank.
           </p>
 
           <p className="about-text">
-            Currently open to internships and freelance collaborations with brands and startups
+            Currently open to freelance collaborations with brands and startups
             who value craft.
           </p>
 
           <div className="stats">
             <div className="stat">
-              <h3>1+</h3>
-              <p>Years coding</p>
-            </div>
-
-            <div className="stat">
               <h3>5+</h3>
-              <p>Projects shipped</p>
+              <p>Project Shipped</p>
             </div>
 
             <div className="stat">
-              <h3>3</h3>
-              <p>Happy clients</p>
+              <h3>100%</h3>
+              <p>Client Satisfaction</p>
+            </div>
+
+            <div className="stat">
+              <h3>90+</h3>
+              <p>Average Lighthouse Speed Score</p>
             </div>
           </div>
         </div>

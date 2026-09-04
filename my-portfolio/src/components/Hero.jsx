@@ -11,13 +11,12 @@ export default function Hero() {
 
         {/* Professional Title */}
         <h2 className="hero-job-title">
-          Full-Stack Developer <span className="gold-accent">& Designer</span>
+          High-Performance Web Developer <span className="gold-accent">& Google Search Expert</span>
         </h2>
 
         {/* Subtitle / Bio */}
         <p className="hero-description">
-          I build clean, high-converting websites for brands and startups 
-          where minimal design meets premium craft.
+          I build high-converting websites that help small businesses rank on Google and turn visitors into customers.
         </p>
 
         {/* Action Buttons */}

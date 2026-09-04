@@ -1,7 +1,7 @@
 import './Skills.css';
 
 const skills = [
-  "HTML", "CSS", "JavaScript", "TypeScript", "React", "Tailwind CSS",
+  "Local SEO Optimization", "Google Business Profile Setup", "AI-Search Visibility", "HTML", "CSS", "JavaScript", "TypeScript", "React", "Tailwind CSS",
   "Node.js", "PostgreSQL", "UI Design", "Branding", "Figma", "Responsive Design"
 ];
 
