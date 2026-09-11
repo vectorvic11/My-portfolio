@@ -23,8 +23,9 @@ export default function About() {
           </h1>
 
           <p className="about-text">
-            I help UK and European businesses solve the 'invisible website' problem. 
-            If your business has great reviews but isn't showing up on the first page of Google, I build the direct path to get you there. I specialize in ultra-fast, mobile-ready sites that rank.
+            I help service businesses across the UK, North America, and Europe solve the 'invisible website' problem.
+            
+            If your business has strong reviews but isn't ranking on the first page of Google, I build the direct path to get you there. I specialize in ultra-fast, mobile-ready sites engineered with Local SEO Schema and 95+ Google PageSpeed scores to turn search traffic into paying customers.
           </p>
 
           <p className="about-text">
