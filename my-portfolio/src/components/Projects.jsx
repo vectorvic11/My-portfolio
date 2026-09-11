@@ -3,6 +3,7 @@ import img2 from '../assets/ecosolar-preview.webp';
 import img3 from '../assets/cumbria-preview.webp';
 import img4 from '../assets/highland-preview.webp';
 import img5 from '../assets/harley-preview.webp';
+import img6 from '../assets/rustic-preview.webp';
 import './Projects.css';
 
 const projects = [
@@ -55,6 +56,16 @@ const projects = [
     image: img5,
     liveLink: "https://harleywellnessquebec.vercel.app",
     codeLink: "https://github.com/vectorvic11/harleywellnessquebec",
+  },
+  {
+    id: 6,
+    name: "The Rustic Bean Cafe & Bakery — Gozo",
+    type: "European Hospitality & Dining",
+    description: "An artisan bakery platform featuring an interactive digital food & drinks menu with dietary filters, daily bake schedule updates, and a table reservation engine.",
+    tech: ["React + Vite", "Tailwind CSS", "Digital Menu Engine", "Table Booking"],
+    image: img6,
+    liveLink: "https://rusticbeancafebakerygozo.vercel.app",
+    codeLink: "https://github.com/vectorvic11/rusticbeancafebakerygozo",
   },
 ];
 
