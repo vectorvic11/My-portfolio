@@ -53,23 +53,10 @@ export default function Projects() {
                   <h3>{project.name} — <span>{project.type}</span></h3>
                 </div>
 
-                {/* Clean, Individual Tech Badges */}
-                <div className="tech-stack flex flex-wrap gap-2 my-2.5">
-                  {Array.isArray(project.tech) ? (
-                    project.tech.map((item, idx) => (
-                      <span 
-                        key={idx} 
-                        className="inline-block text-xs px-2.5 py-1 rounded bg-slate-800/80 text-amber-400 border border-slate-700 font-medium"
-                      >
-                        {item}
-                      </span>
-                    ))
-                  ) : (
-                    <span className="inline-block text-xs px-2.5 py-1 rounded bg-slate-800/80 text-amber-400 border border-slate-700 font-medium">
-                      {project.tech}
-                    </span>
-                  )}
-                </div>
+                {/* Clean, Bullet-Separated Tech Stack */}
+                <p className="text-xs font-semibold text-amber-400 tracking-wider uppercase my-2.5">
+                  {Array.isArray(project.tech) ? project.tech.join("  •  ") : project.tech}
+                </p>
                 
                 <p className="project-description">{project.description}</p>
                 
