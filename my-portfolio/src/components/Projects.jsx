@@ -1,7 +1,5 @@
 import img1 from '../assets/Screenshot1.png';
-import img2 from '../assets/Screenshot2.png';
-import img3 from '../assets/Screenshot3.png';
-import img4 from '../assets/Screenshot4.png';
+import img2 from '../assets/apex-preview.webp';
 import './Projects.css';
 
 const projects = [
@@ -15,6 +13,16 @@ const projects = [
     liveLink: "https://asabahousescout.com.ng",
     codeLink: "https://github.com/vectorvic11/asabahousescout.git",
   },
+  {
+  id: 2,
+  name: "Apex Electrical Services — Manchester",
+  type: "Trade & Emergency Landing Page",
+  description: "A commercial landing page for a 24/7 emergency electrical contractor in Greater Manchester, UK. Built with sub-second mobile loading, Local Schema.org AI indexing, and achieved a verified 100/100 Google Lighthouse performance score.",
+  tech: ["React + Vite", "Tailwind CSS", "100/100 PageSpeed", "Local SEO Schema"],
+  image: img2,
+  liveLink: "https://apexelectricalmanchester.vercel.app",
+  codeLink: "https://github.com/vectorvic11/apexelectricalmanchester",
+}
 ];
 
 export default function Projects() {

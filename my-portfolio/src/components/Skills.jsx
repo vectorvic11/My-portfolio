@@ -1,8 +1,8 @@
 import './Skills.css';
 
 const skills = [
-  "Local SEO Optimization", "Google Business Profile Setup", "AI-Search Visibility", "HTML", "CSS", "JavaScript", "TypeScript", "React", "Tailwind CSS",
-  "Node.js", "PostgreSQL", "UI Design", "Branding", "Figma", "Responsive Design"
+  "Local SEO Optimization", "Google Business Profile Setup", "AI-Search Visibility", "Web Performance Optimization", "HTML", "CSS", "JavaScript", "TypeScript", "React", "Tailwind CSS",
+  "Node.js", "PostgreSQL", "MySQL", "MongoDB",
 ];
 
 export default function Skills() {

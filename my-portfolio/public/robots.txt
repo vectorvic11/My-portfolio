@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://my-portfolio-kappa-wheat-blwrwaz4w3.vercel.app/sitemap.xml
