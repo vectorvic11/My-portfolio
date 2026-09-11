@@ -1,5 +1,6 @@
 import img1 from '../assets/Screenshot1.png';
 import img2 from '../assets/apex-preview.webp';
+import img3 from '../assets/ecosolar-preview.webp';
 import './Projects.css';
 
 const projects = [
@@ -15,6 +16,16 @@ const projects = [
   },
   {
     id: 2,
+    name: "EcoSolar Bristol — Clean Energy Platform",
+    type: "Renewables & Battery Storage",
+    description: "A high-converting solar and battery installation platform featuring an interactive solar ROI savings calculator. Optimized for Google Local Search with a verified 98/100 mobile PageSpeed score.",
+    tech: ["React + Vite", "Tailwind CSS", "Solar ROI Calculator", "98/100 PageSpeed"],
+    image: img3,
+    liveLink: "https://ecosolarbristol.vercel.app",
+    codeLink: "https://github.com/vectorvic11/ecosolarbristol",
+  },
+  {
+    id: 3,
     name: "Asaba Houses Scout",
     type: "Real Estate Platform",
     description: "PropTech Solutions Platform: A high-speed property listing platform optimized for Google Search. Built to help agencies reduce marketing costs by 40% through organic search visibility and a mobile-first user experience.",
