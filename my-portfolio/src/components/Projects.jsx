@@ -2,6 +2,7 @@ import img1 from '../assets/apex-preview.webp';
 import img2 from '../assets/ecosolar-preview.webp';
 import img3 from '../assets/cumbria-preview.webp';
 import img4 from '../assets/highland-preview.webp';
+import img5 from '../assets/harley-preview.webp';
 import './Projects.css';
 
 const projects = [
@@ -44,6 +45,16 @@ const projects = [
     image: img4,
     liveLink: "https://highlandpropertybirmingham.vercel.app",
     codeLink: "https://github.com/vectorvic11/highlandpropertybirmingham",
+  },
+  {
+    id: 5,
+    name: "Harley Wellness Clinic — Montreal",
+    type: "Healthcare & Sports Rehabilitation",
+    description: "A clinical platform featuring an interactive symptom treatment finder, practitioner booking, and direct billing integration for Canadian insurance providers.",
+    tech: ["React + Vite", "Tailwind CSS", "Medical Treatment Finder", "Canadian SEO"],
+    image: img5,
+    liveLink: "https://harleywellnessquebec.vercel.app",
+    codeLink: "https://github.com/vectorvic11/harleywellnessquebec",
   },
 ];
 
