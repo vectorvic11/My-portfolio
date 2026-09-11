@@ -5,24 +5,24 @@ import './Projects.css';
 const projects = [
   {
     id: 1,
+    name: "Apex Electrical Services — Manchester",
+    type: "Trade & Emergency Landing Page",
+    description: "A commercial landing page for a 24/7 emergency electrical contractor in Greater Manchester, UK. Built with sub-second mobile loading, Local Schema.org AI indexing, and achieved a verified 100/100 Google Lighthouse performance score.",
+    tech: ["React + Vite", "Tailwind CSS", "100/100 PageSpeed", "Local SEO Schema"],
+    image: img2,
+    liveLink: "https://apexelectricalmanchester.vercel.app",
+    codeLink: "https://github.com/vectorvic11/apexelectricalmanchester",
+  },
+  {
+    id: 2,
     name: "Asaba Houses Scout",
     type: "Real Estate Platform",
     description: "PropTech Solutions Platform: A high-speed property listing platform optimized for Google Search. Built to help agencies reduce marketing costs by 40% through organic search visibility and a mobile-first user experience.",
-    tech: "REACT + TAILWIND CSS + vite",
+    tech: ["React", "Tailwind CSS", "Vite", "SEO Optimized"],
     image: img1,
-    liveLink: "https://asabahousescout.com.ng",
+    liveLink: "https://asabahousescout.vercel.app",
     codeLink: "https://github.com/vectorvic11/asabahousescout.git",
   },
-  {
-  id: 2,
-  name: "Apex Electrical Services — Manchester",
-  type: "Trade & Emergency Landing Page",
-  description: "A commercial landing page for a 24/7 emergency electrical contractor in Greater Manchester, UK. Built with sub-second mobile loading, Local Schema.org AI indexing, and achieved a verified 100/100 Google Lighthouse performance score.",
-  tech: ["React + Vite", "Tailwind CSS", "100/100 PageSpeed", "Local SEO Schema"],
-  image: img2,
-  liveLink: "https://apexelectricalmanchester.vercel.app",
-  codeLink: "https://github.com/vectorvic11/apexelectricalmanchester",
-}
 ];
 
 export default function Projects() {
@@ -30,7 +30,7 @@ export default function Projects() {
     <section id="projects" className="projects">
       <div className="projects-container">
         
-        {/* Updated Header Structure */}
+        {/* Header Structure */}
         <header className="projects-header">
           <div className="header-left">
             <span className="selected-work-label">SELECTED WORK</span>
@@ -45,20 +45,51 @@ export default function Projects() {
           {projects.map((project) => (
             <div key={project.id} className="project-card">
               <div className="project-image-wrapper">
-                <img src={project.image} alt={project.name} />
+                <img src={project.image} alt={`${project.name} preview`} loading="lazy" />
               </div>
               
               <div className="project-info">
                 <div className="project-title-row">
                   <h3>{project.name} — <span>{project.type}</span></h3>
-                  <span className="tech-stack">{project.tech}</span>
+                </div>
+
+                {/* Clean, Individual Tech Badges */}
+                <div className="tech-stack flex flex-wrap gap-2 my-2.5">
+                  {Array.isArray(project.tech) ? (
+                    project.tech.map((item, idx) => (
+                      <span 
+                        key={idx} 
+                        className="inline-block text-xs px-2.5 py-1 rounded bg-slate-800/80 text-amber-400 border border-slate-700 font-medium"
+                      >
+                        {item}
+                      </span>
+                    ))
+                  ) : (
+                    <span className="inline-block text-xs px-2.5 py-1 rounded bg-slate-800/80 text-amber-400 border border-slate-700 font-medium">
+                      {project.tech}
+                    </span>
+                  )}
                 </div>
                 
                 <p className="project-description">{project.description}</p>
                 
                 <div className="project-actions">
-                  <a href={project.liveLink} target="_blank" className="btn-pill btn-white">Live</a>
-                  <a href={project.codeLink} target="_blank" className="btn-pill btn-outline">Code</a>
+                  <a 
+                    href={project.liveLink} 
+                    target="_blank" 
+                    rel="noopener noreferrer" 
+                    className="btn-pill btn-white"
+                  >
+                    Live
+                  </a>
+                  <a 
+                    href={project.codeLink} 
+                    target="_blank" 
+                    rel="noopener noreferrer" 
+                    className="btn-pill btn-outline"
+                  >
+                    Code
+                  </a>
                 </div>
               </div>
             </div>
