@@ -1,6 +1,7 @@
 import img1 from '../assets/Screenshot1.png';
 import img2 from '../assets/apex-preview.webp';
 import img3 from '../assets/ecosolar-preview.webp';
+import img4 from '../assets/cumbria-preview.webp';
 import './Projects.css';
 
 const projects = [
@@ -26,6 +27,16 @@ const projects = [
   },
   {
     id: 3,
+    name: "Cumbria Bathrooms & Heating — Carlisle",
+    type: "Showroom & Trade Merchant",
+    description: "A luxury showroom and merchant platform featuring 3D virtual design booking, category filtering, and trade account workflows for Lake District plumbers and homeowners.",
+    tech: ["React + Vite", "Tailwind CSS", "3D CAD Booking", "Local Cumbria SEO"],
+    image: img4,
+    liveLink: "https://cumbriabathrooms.vercel.app",
+    codeLink: "https://github.com/vectorvic11/cumbriabathrooms",
+  },
+  {
+    id: 4,
     name: "Asaba Houses Scout",
     type: "Real Estate Platform",
     description: "PropTech Solutions Platform: A high-speed property listing platform optimized for Google Search. Built to help agencies reduce marketing costs by 40% through organic search visibility and a mobile-first user experience.",
